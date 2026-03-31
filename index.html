@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 THẾ GIỚI GAME CỦA TRẦN BẢO NAM 🎮</title>
+    <title>🎮 TRẠM GAME GIẢI TRÍ - TRẦN BẢO NAM 🎮</title>
     <style>
-        /* Nền chuyển động Gradient cực ngầu */
+        /* Hiệu ứng nền chuyển động Gradient */
         body { 
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
             background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            animation: gradient 10s ease infinite;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -26,66 +26,69 @@
         }
 
         h1 { 
-            margin-top: 30px; 
-            font-size: 2.5rem;
-            text-shadow: 0 0 20px rgba(255,255,255,0.5);
-            background: rgba(0,0,0,0.4);
+            margin-top: 40px; 
+            font-size: 2.2rem;
+            text-shadow: 0 0 15px rgba(0,255,204,0.6);
+            background: rgba(0,0,0,0.5);
             padding: 15px 40px;
             border-radius: 50px;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid #00ffcc;
         }
 
         /* Khung chứa từng game */
         .game-container { 
             background: rgba(0, 0, 0, 0.85); 
             padding: 20px; 
-            border-radius: 25px; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            border: 3px solid #ffffff22;
-            margin: 30px 0;
-            transition: transform 0.3s;
+            border-radius: 20px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            margin: 30px 10px;
+            max-width: 900px;
+            width: 90%;
+            text-align: center;
         }
 
-        .game-container:hover {
-            transform: scale(1.02);
-            border-color: #00ffcc;
-        }
+        h2 { color: #00ffcc; font-size: 1.5rem; margin-bottom: 20px; }
 
-        h2 { color: #00ffcc; margin-bottom: 15px; text-transform: uppercase; }
-
-        /* Khung iframe được bảo vệ để chặn nhảy trang */
+        /* Cấu hình khung game mượt mà */
         iframe { 
-            width: 850px; 
-            height: 550px; 
+            width: 100%; 
+            height: 600px; 
             border: none; 
-            border-radius: 15px; 
+            border-radius: 12px; 
             background: #000;
         }
 
-        @media (max-width: 900px) {
-            iframe { width: 95vw; height: 50vh; }
+        /* Điều chỉnh cho game dạng màn hình dọc (Game 4) */
+        .portrait-game iframe {
+            height: 800px;
+            max-width: 450px;
+        }
+
+        @media (max-width: 768px) {
+            iframe { height: 400px; }
+            .portrait-game iframe { height: 600px; }
             h1 { font-size: 1.5rem; }
         }
 
         .footer { 
             margin-top: 50px; 
-            background: rgba(0,0,0,0.7); 
+            background: rgba(0,0,0,0.8); 
             width: 100%; 
             text-align: center; 
-            padding: 20px;
-            font-size: 1rem;
-            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-top: 1px solid #00ffcc33;
         }
     </style>
 </head>
 <body>
 
-    <h1>🎮 GAME ĐẦU BÒ CỦA NAM 🎮</h1>
+    <h1>🎮 TRẠM GAME CỦA NAM 🎮</h1>
 
     <div class="game-container">
-        <h2>Trò Chơi Số 1</h2>
+        <h2>Trò Chơi 1</h2>
         <iframe 
-            src="https://html5.gamedistribution.com/5916a7fd3b4843018f2f96c7780017f2/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0"></iframe>" 
+            src="https://html5.gamedistribution.com/a084e6ab82f9420bbe89bbe5c1b150fc/" 
             sandbox="allow-scripts allow-same-origin allow-forms"
             scrolling="no" 
             frameborder="0">
@@ -93,9 +96,9 @@
     </div>
 
     <div class="game-container">
-        <h2>Trò Chơi Số 2</h2>
+        <h2>Trò Chơi 2</h2>
         <iframe 
-            src="https://html5.gamedistribution.com/5083a63adc7248d8b04dd72cde2eb78c/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="1280" height="720" scrolling="none" frameborder="0"></iframe>" 
+            src="https://html5.gamedistribution.com/4ac9f70eac99427d9fa87c1e7e1908ef/" 
             sandbox="allow-scripts allow-same-origin allow-forms"
             scrolling="no" 
             frameborder="0">
@@ -103,9 +106,19 @@
     </div>
 
     <div class="game-container">
-        <h2>Trò Chơi Số 3</h2>
+        <h2>Trò Chơi 3</h2>
         <iframe 
-            src="https://html5.gamedistribution.com/a084e6ab82f9420bbe89bbe5c1b150fc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="1280" height="720" scrolling="none" frameborder="0"></iframe>" 
+            src="https://html5.gamedistribution.com/5f0179bde2b543d5900d20792978a3a5/" 
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            scrolling="no" 
+            frameborder="0">
+        </iframe>
+    </div>
+
+    <div class="game-container portrait-game">
+        <h2>Trò Chơi 4</h2>
+        <iframe 
+            src="https://html5.gamedistribution.com/172e0bd0c40442dbae3d4adb42a98433/" 
             sandbox="allow-scripts allow-same-origin allow-forms"
             scrolling="no" 
             frameborder="0">
@@ -113,7 +126,8 @@
     </div>
 
     <div class="footer">
-        © 2026 - Designed by <strong>Trần Bảo Nam</strong>
+        <p>© 2026 - Bản quyền thuộc về <strong>Trần Bảo Nam</strong></p>
+        <p style="font-size: 0.8rem; color: #888;">Gợi ý: Nếu game không load, hãy thử tắt trình chặn quảng cáo nhé!</p>
     </div>
 
 </body>
