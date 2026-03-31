@@ -2,22 +2,119 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Web Game Của Nam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 THẾ GIỚI GAME CỦA TRẦN BẢO NAM 🎮</title>
     <style>
-        body { background: #1a1a1a; color: white; text-align: center; margin: 0; padding: 20px; font-family: sans-serif; }
-        .game-box { max-width: 900px; margin: 20px auto; background: #333; padding: 15px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        iframe { width: 100%; height: 600px; border: none; border-radius: 10px; }
+        /* Nền chuyển động Gradient cực ngầu */
+        body { 
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 { 
+            margin-top: 30px; 
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            background: rgba(0,0,0,0.4);
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        /* Khung chứa từng game */
+        .game-container { 
+            background: rgba(0, 0, 0, 0.85); 
+            padding: 20px; 
+            border-radius: 25px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 3px solid #ffffff22;
+            margin: 30px 0;
+            transition: transform 0.3s;
+        }
+
+        .game-container:hover {
+            transform: scale(1.02);
+            border-color: #00ffcc;
+        }
+
+        h2 { color: #00ffcc; margin-bottom: 15px; text-transform: uppercase; }
+
+        /* Khung iframe được bảo vệ để chặn nhảy trang */
+        iframe { 
+            width: 850px; 
+            height: 550px; 
+            border: none; 
+            border-radius: 15px; 
+            background: #000;
+        }
+
+        @media (max-width: 900px) {
+            iframe { width: 95vw; height: 50vh; }
+            h1 { font-size: 1.5rem; }
+        }
+
+        .footer { 
+            margin-top: 50px; 
+            background: rgba(0,0,0,0.7); 
+            width: 100%; 
+            text-align: center; 
+            padding: 20px;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body>
-    <h1>🎮 KHO GAME GIẢI TRÍ 🎮</h1>
-    
-    <div class="game-box">
 
-        <iframe src="https://html5.gamedistribution.com/cecfade6d8ef4fb7a4b1924452da4204/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0"></iframe>
-   <iframe src="https://html5.gamedistribution.com/5916a7fd3b4843018f2f96c7780017f2/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0"></iframe>
+    <h1>🎮 GAME ĐẦU BÒ CỦA NAM 🎮</h1>
+
+    <div class="game-container">
+        <h2>Trò Chơi Số 1</h2>
+        <iframe 
+            src="<"https://html5.gamedistribution.com/5916a7fd3b4843018f2f96c7780017f2/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0"></iframe>" 
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            scrolling="no" 
+            frameborder="0">
+        </iframe>
     </div>
 
-    <p>© 2026 - Trần Bảo Nam</p>
+    <div class="game-container">
+        <h2>Trò Chơi Số 2</h2>
+        <iframe 
+            src="<"https://html5.gamedistribution.com/5083a63adc7248d8b04dd72cde2eb78c/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="1280" height="720" scrolling="none" frameborder="0"></iframe>" 
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            scrolling="no" 
+            frameborder="0">
+        </iframe>
+    </div>
+
+    <div class="game-container">
+        <h2>Trò Chơi Số 3</h2>
+        <iframe 
+            src="<"https://html5.gamedistribution.com/a084e6ab82f9420bbe89bbe5c1b150fc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="1280" height="720" scrolling="none" frameborder="0"></iframe>" 
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            scrolling="no" 
+            frameborder="0">
+        </iframe>
+    </div>
+
+    <div class="footer">
+        © 2026 - Designed by <strong>Trần Bảo Nam</strong>
+    </div>
+
 </body>
 </html>
